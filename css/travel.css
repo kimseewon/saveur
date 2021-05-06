@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* travel */
+
+.main_item .main_container{
+    width: 1440px;
+    margin: 0 auto;
+
+}
+.main_item section:nth-child(2){
+    overflow: hidden;
+
+}
+
+.main_item section:nth-child(2) aside{
+    float: left;
+}
+
+.main_item section:nth-child(2) article{
+    float: left;
+}
+img:nth-child(1){
+    display: inline-block;
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    text-align: center;
+}
+img:nth-child(2){
+    width: 150px;
+    height: 150px;
+}
+.back{
+    position: relative;
+}
+
+
