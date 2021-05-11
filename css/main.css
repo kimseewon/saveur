@@ -12,26 +12,63 @@
 
 }
 
-.main_item section:nth-child(2) aside{
+.main_item section:nth-child(2) aside:nth-child(1){
     float: left;
+    margin-top: 30px;
+    margin-left: 5%;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 25px;
+    box-shadow: black;
 }
 
 .main_item section:nth-child(2) article{
-    float: left;
+    float:left;
+    margin-left: 10%;
+    margin-top: 30px;
+    background-color: white;
+    margin-right: 10%;
+    box-shadow: black;
 }
-img:nth-child(1){
+
+
+.main_item section:nth-child(2) article p,strong{
+float: left;
+margin-right: 10px;
+}
+
+.main_item section:nth-child(2) article h2{
+    text-align: center;
+}
+
+.main_bucket{
     display: inline-block;
     width: auto !important;
     max-width: 100%;
     height: auto !important;
     text-align: center;
 }
-img:nth-child(2){
-    width: 150px;
-    height: 150px;
+
+#main_bucket .all_bucket {
+height: 100vh;
+background-image: url(../images/saveur.main.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+position: relative;
+background-size: auto;
 }
-.back{
-    position: relative;
+
+#main_bucket .all_bucket .txt_bucket{
+    position: absolute;
+    background-color: black;
+    opacity: 0.6;
+    color: white;
+    margin: 0 auto;
+    top: 50%;
+    left: 20%;
+    height: 70px;
+    text-align: center;
 }
 
 
