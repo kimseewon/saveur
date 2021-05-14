@@ -4,91 +4,171 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/travel.css">
+    <link rel="stylesheet" href="../css/travel.common.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <title>Document</title>
 </head>
 <body>
-    <header>
+<header>
     <div class="header-wrap">
         <div class="header-inner">
-            <p class="main_header"><img src="images/saveur1.png" alt=""></p>
+            <p class="main_header"><a href="/index.html"><img src="../images/saveur1.png" alt=""></a></p>
             <div class="mobile-menu-wrap">
                 <div class="mobile-menu-scroll">
             <nav id="gnb">
-                <ul class="#">
-                
-            </ul>
+            <ul class="#">
             <li>
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest-square"></i>
+                <a href="https://facebook.com/"><i class="fab fa-facebook" style="color:rgb(0, 0, 255);"></i></a>
+                <a href="https://twitter.com/?lang=ko"><i class="fab fa-twitter-square" style="color: skyblue;"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram" style="color:orangered"></i></a>
+                <a href="https://www.pinterest.co.kr/"><i class="fab fa-pinterest-square" style="color: red;"></i></a>
             </li>
             <li class="m1">
-                <a href="#">RECIPES</a>
+                <a href="../pages/recipes.html" style="color: black;">RECIPES</a>
                 <ul></ul>
             </li>
             <li class="m2">
-                <a href="#">TRAVEL</a>
+                <a href="../pages/Travel.html" style="color: black;">TRAVEL</a>
                 <ul></ul>
             </li>
             <li class="m3">
-                <a href="#">FOOD</a>
+                <a href="../pages/food.html" style="color: black;">FOOD</a>
                 <ul></ul>
             </li>
+            
             </ul>
                 </nav>
+            <!-- <a href="#"> -->
+                <li class="menubar" id="slide-open">
+                    <a href="#" class="mobile hamburger"><i class="fas fa-bars fa-2x" style="color:black;"></i></a>
+                    <a href="#" class="mobile close"><i class="fas fa-times fa-2x" style="color: black;"></i></a>
+                </li>
+            <!-- </a> -->
+            <!-- <div id="mobile_menu"> -->
+                <ul id="mobile_menu">
+                    <li class="m1">
+                        <a href="../pages/recipes.html" style="color: black; font-size: 30px;">RECIPES</a>
+                    </li>
+                    <li class="m2">
+                        <a href="../pages/Travel.html" style="color: black; font-size: 30px;">TRAVEL</a>
+                    </li>
+                    <li class="m3">
+                        <a href="../pages/food.html" style="color: black; font-size: 30px;">FOOD</a>
+                    </li>
+                    <li class="m4">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook fa-2x" style="color:rgb(0, 0, 255);"></i></a>
+                        <a href="https://twitter.com/?lang=ko"><i class="fab fa-twitter-square fa-2x" style="color: skyblue;"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x" style="color:orangered"></i></a>
+                        <a href="https://www.pinterest.co.kr/"><i class="fab fa-pinterest-square fa-2x" style="color: red;"></i></a>
+                    </li>
+                </ul>
+            <!-- </div> -->
             </div>
         </div>
     </div>
 </div>
-
 </header>
 <div class="main_item">
-    <a class="back" href="#">
-<img src="../Plating2/images/saveur.main.jpg" alt="">
-</a>
-<h2>Our Favorite Fruit Snack</h2>
-<p>Maneet Chauhan's pineapple chaat is an irresistible introduction to making Indian street foods at home.
-BY STEPHANIE BURT</p>
-<h2>RECIPES</h2> 
-<a href="#"> <img src="../Plating2/images/Chicken Tortilla Soup.jpg" alt="#" style="width: 150px; height: 150px;"></a>
-<p>Chicken Tortilla Soup <br> 
-    (Sopa Azteca) <br>
-    MAY 3, 2021 4:55 PM</p>
+    <div class="main_container">
+        <section>
+            <h1>RECIPES</h1>
+        </section>
+        <section>
+            <aside>
+                <div>
+                    <h2>Latest</h2>
+                    <a href="#"> <img src="../images/travel.1.jpg" alt="#" style="width: 150px; height: 150px;"></a>
+                    <p>Ajika<br>
+                        MAY 3, 2021 4:55 PM</p>
+                    <a href="#"><img src="../images/travel.2.jpg" alt="#" style="width: 150px; height: 150px;"></a>
+                    <p>Georgian Ajika Goes Mainstream<br>
+                    MAY 6, 2021 8:18 AM
+                    </p>
+                    <a href="#"><img src="https://via.placeholder.com/150" alt="#"></a>
+                    <p>광고 영역</p>
+                    <a href="#"><img src="../images/travel.3.jpg" alt="#" style="width: 150px; height: 150px;"></a>
+                    <p>Eight (Really Great) <br> 
+                        Fermented Black Bean Recipes <br>
+                        MAY 11, 2021 10:43 PM</p>
+                <a href="../pages/recipes.html"><button>RECIPES</button></a>
+                </div>
+            </aside>
+            
+            <article>
+                <h2>Featured in Recipes</h2>
+                <a href="#"><img src="../images/travel.5.jpg" alt="#" style="width: 200px; height: 150px;"></a>
+                <p>BY SAVEUR EDITORS <br>
+                    MAY 6, 2021</p>
+                    <strong>
+                        How Learning to Butcher in <br>
+                        France Made Me  Rediscover  <br> 
+                        MyselfMeat and mentorship    <br> 
+                        with thepioneerof seed-to-sausage <br>
+                        charcuterie..</strong>
+            </article>
+            <article>
+                <a href="#"><img src="../images/travel.6.jpg" alt="#" style="width: 210px; height: 150px;"></a>
+                <p>BY SAVEUR EDITORS <br>
+                    MAY 6, 2021</p>
+                    <strong>
+                    Seared Halibut with Artichokesà <br>
+                    la Barigoule</strong>
+            </article>
+            <article>
+                <a href="#"><img src="../images/travel.jpg" alt="#" style="width: 200px; height: 150px;"></a>
+                <p>BY SAVEUR EDITORS <br>
+                    MAY 6, 2021</p>
+                    <strong>
+                    Best Thing I Ate This <br> 
+                    Month: Springtime Artichokes at <br> 
+                    Charleston’s Chez Nous</strong>
+            </article>
+            <article>
+                <a href="#"><img src="../images/travel.8.jpg" alt="#" style="width: 200px; height: 150px;"></a>
+                <p>BY SAVEUR EDITORS <br>
+                    MAY 6, 2021</p>
+                    <strong>
+                    NORWAY
+                </strong>
+            </article>
+            <aside class="sub_aside">
+                <div>
+                    <a href="#"><img src="../images/unnamed.jpg" alt=""></a>
+                </div>
+            </aside>
+        </section>
+    </div>
 </div>
-
-    <footer>
-        <h5>LINKS</h5>
-        <p>Home  Newsletter Sign-Up  contact  Privacy Policy  Terms of Use  Sitemap  DepositPhotos</p>
+<footer>
+    <h5>LINKS</h5>
+    <p>Home  Newsletter Sign-Up  contact  Privacy Policy  Terms of Use  Sitemap  DepositPhotos</p>
     <br>
     <h5>FOLLOW US</h5>
-    <i class="fab fa-facebook"></i>
-    <i class="fab fa-twitter-square"></i>
-    <i class="fab fa-instagram"></i>
-    <i class="fab fa-pinterest-square"></i>
+    <a href="https://facebook.com/"><i class="fab fa-facebook" style="color: white;"></i></a>
+    <a href="https://twitter.com/?lang=ko"><i class="fab fa-twitter-square" style="color: white;"></i></a>
+    <a href="https://www.instagram.com/"><i class="fab fa-instagram" style="color: white;"></i></a>
+    <a href="https://www.pinterest.co.kr/"><i class="fab fa-pinterest-square" style="color: white;"></i></a>
     <br>
     <br>
-    
     <h5>DISCLAIMER(S)</h5>
     <p>We are a participant in the Amazon Services LLC Associates Program, <br> 
         an affiliate advertising program designed to provide a means for us to earn fees by linking to <br> 
         Amazon.com and affiliated sites. Registration on or use of this site constitutes acceptance of our Terms of Service.</p>
     <br>
-        <p>© 2021 Acton Media. All rights reserved.</p>
-    </footer>
+    <p>© 2021 Acton Media. All rights reserved.</p>
+</footer>
 
-    <script src="js/jquery.js"></script>
-	<script src="js/jquery.bxslider.min.js"></script>
-	<script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/popol.js"></script>
-	<script src="js/main.js"></script>
-    <script>
+<!-- <script src="js/jquery.js"></script> -->
+<script src="../js/jquery-2.2.4.min.js"></script>
+<script src="../js/isotope.pkgd.min.js"></script>
+<!-- <script src="js/popol.js"></script> -->
+<script src="../js/common.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+<script>
 
-    </script>
+</script>
 </body>
 </html>

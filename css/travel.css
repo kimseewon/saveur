@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* travel */
+/* 메인 */
 
 .main_item .main_container{
     width: 1440px;
@@ -12,26 +12,43 @@
 
 }
 
-.main_item section:nth-child(2) aside{
+.main_item section:nth-child(2) aside:nth-child(1){
     float: left;
+    margin-top: 30px;
+    margin-left: 5%;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 25px;
+    box-shadow: black;
 }
 
 .main_item section:nth-child(2) article{
-    float: left;
+    float:left;
+    margin-left: 10%;
+    margin-top: 30px;
+    background-color: white;
+    margin-right: 10%;
+    box-shadow: black;
+    width: 640px;
 }
-img:nth-child(1){
-    display: inline-block;
-    width: auto !important;
-    max-width: 100%;
-    height: auto !important;
+
+
+.main_item section:nth-child(2) article p,strong{
+float: left;
+margin-right: 10px;
+}
+
+.main_item section:nth-child(2) article h2{
     text-align: center;
 }
-img:nth-child(2){
-    width: 150px;
-    height: 150px;
-}
-.back{
-    position: relative;
-}
 
-
+h1{
+    text-align: center;
+    color: mediumspringgreen;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+.main_item section:nth-child(2) article{
+    float: left;
+}

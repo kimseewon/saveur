@@ -45,7 +45,6 @@ li {
     height: 100vh;
     margin-left: 40%;
     margin-bottom: 5%;
-
 }
 
 #mobile_menu li {
@@ -171,25 +170,17 @@ footer{
     background-color:#cccccc;
 }
 h1{text-align: left;}
+.main_item section:nth-child(2) article h2{
+    margin-top: -10%;
+    position: absolute;
+}
 }
 
 @media all and (max-width:616px){
-    #main_bucket .all_bucket .txt_bucket{
-        left: 0;
-        top:          50%;
-        font-family:  'museo_slab500';
-        color:        #fff;
-        padding-left: 20px;
-        width:        35%;
-        line-height:  20px;
-        height: 10%;
-        background:   rgb(0, 0, 0);
-        background:   rgba(0, 0, 0, 1);
+    .main_item section:nth-child(2) article h2{
+        margin-top: -10%;
+        position: absolute;
     }
-    .gnb.on {
-        right: 0;
-    }
-    h1{text-align: left;}
     .main_item section:nth-child(2) article{
         float: left;
     }

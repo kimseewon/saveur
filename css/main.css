@@ -52,11 +52,8 @@ margin-right: 10px;
 #main_bucket .all_bucket {
 height: 100vh;
 background-image: url(../images/saveur.main.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
 position: relative;
-background-size: auto;
+width: 100%;
 }
 
 #main_bucket .all_bucket .txt_bucket{
@@ -71,4 +68,6 @@ background-size: auto;
     text-align: center;
 }
 
-
+.main_item section:nth-child(2) article h2{
+    margin-top: -5%;
+}
