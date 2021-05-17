@@ -127,8 +127,10 @@ footer{
     font-size: 13px;
     width: 570px;
     margin-top: 30px;
-    left: 0;
-}
+
+        margin-left: 0;
+    }
+
 .sub_aside{
     display: none;
 }
@@ -183,5 +185,6 @@ h1{text-align: left;}
     }
     .main_item section:nth-child(2) article{
         float: left;
+        padding-left: 0;
     }
 }

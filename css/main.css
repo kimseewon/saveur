@@ -50,10 +50,11 @@ margin-right: 10px;
 }
 
 #main_bucket .all_bucket {
-height: 100vh;
-background-image: url(../images/saveur.main.jpg);
-position: relative;
-width: 100%;
+    background-image: url(../images/saveur.main.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #main_bucket .all_bucket .txt_bucket{
@@ -63,11 +64,16 @@ width: 100%;
     color: white;
     margin: 0 auto;
     top: 50%;
-    left: 20%;
+    left: 30%;
     height: 70px;
     text-align: center;
+    height: 11%;
 }
 
 .main_item section:nth-child(2) article h2{
     margin-top: -5%;
+}
+
+.main_bucket{
+    background-image: url(../images/saveur.main.jpg);
 }

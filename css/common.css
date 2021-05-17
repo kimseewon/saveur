@@ -96,15 +96,19 @@ footer{
         font-family:  'museo_slab500';
         color:        #fff;
         padding-left: 20px;
-        width:        30%;
+        width:        40%;
         line-height:  20px;
-        height: 10%;
+        height: 13%;
         margin-left: 20%;
         background:   rgb(0, 0, 0);
         background:   rgba(0, 0, 0, 1);
     }
     h1{text-align: left;}
-    
+    #main_bucket .all_bucket {
+        background-image: url(../images/saveur.main.jpg);
+        width: 100%;
+        height: 0 auto;
+    }
 }
 
 @media all and (max-width:767px) { 
@@ -128,7 +132,7 @@ footer{
     font-size: 13px;
     width: 570px;
     margin-top: 30px;
-    left: 0;
+    margin-left: 0;
 }
 .sub_aside{
     display: none;
@@ -136,14 +140,14 @@ footer{
 
 
 #main_bucket .all_bucket .txt_bucket{
-    left: 0;
+    left: 100px;
     top:          50%;
     font-family:  'museo_slab500';
     color:        #fff;
     padding-left: 20px;
-    width:        40%;
+    width:        50%;
     line-height:  20px;
-    height: 10%;
+    height: 14%;
     background:   rgb(0, 0, 0);
     background:   rgba(0, 0, 0, 1);
 }
@@ -171,18 +175,27 @@ footer{
     background-color:#cccccc;
 }
 h1{text-align: left;}
+#main_bucket .all_bucket {
+    background-image: url(../images/saveur.main.jpg);
+    background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 0;
+        padding-top: 66.64%; /* (img-height / img-width * container-width) */
+                    /* (853 / 1280 * 100) */
+}
 }
 
 @media all and (max-width:616px){
     #main_bucket .all_bucket .txt_bucket{
-        left: 0;
+        left: 50px;
         top:          50%;
         font-family:  'museo_slab500';
         color:        #fff;
         padding-left: 20px;
-        width:        35%;
+        width:        60%;
         line-height:  20px;
-        height: 10%;
+        height: 13%;
         background:   rgb(0, 0, 0);
         background:   rgba(0, 0, 0, 1);
     }
