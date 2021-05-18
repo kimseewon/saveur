@@ -106,6 +106,6 @@ $(function(){
                 
                 $("#mobile_menu").hide();
             }
-        }
+        
     });
 });
