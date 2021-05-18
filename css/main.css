@@ -19,7 +19,7 @@
     text-align: center;
     background-color: white;
     margin-bottom: 25px;
-    box-shadow: black;
+
 }
 
 .main_item section:nth-child(2) article{
@@ -28,7 +28,7 @@
     margin-top: 30px;
     background-color: white;
     margin-right: 10%;
-    box-shadow: black;
+
 }
 
 
