@@ -1,111 +1,122 @@
-$(function(){
-	var gnbFlag = false;
-    var gnbIndex;
+window.addEventListener('load', function(){
 
-    $(".nav li").on({
-        "mouseenter" : function() {
-            /* lnb show */
-
-            if (gnbIndex != undefined) {
-                $(".lnb").eq(gnbIndex).css("display","none");
-            }
-
-            gnbIndex = $(this).index();
-            gnbFlag = true;
-
-            $(".lnb_container").removeClass("disappear");
-            $(".lnb_container").addClass("appear");
-            $(".lnb_container").show();
-
-            $(".lnb").eq(gnbIndex).css("display","block");  // 인라인 태그의 우선순위를 이용
-        
-            /* 액티브 바 show */
-
-            $(".active_bar").show();  
-
-            // 선택된 li의 left와 width를 구해 active_bar의 위치와 길이를 조절한다
-            var listLeft = $(this).offset().left;
-            var listWidth = $(this).width();
+    var MOVEING_PX = 4,
+        AUTO_TIME = 2000,
     
-            $(".active_bar").width(listWidth);
-            $(".active_bar").offset({left: listLeft + 17}); // li에 padding이 있었으로 17을 더 더해준다.
-        
-        },
-        "mouseleave" : function() {
-            //...
-        }
+        slide = document.getElementById('slide'),
+        indi = document.createElement('ul'),
+        slideCnt = slide.getElementsByClassName('cnt'),
+        slideCntItem = slideCnt[0].getElementsByTagName('li'),
+        prevBtn = slide.getElementsByClassName('prev'),
+        nextBtn = slide.getElementsByClassName('next'),
+        playBtn = slide.getElementsByClassName('play'),
+        stopBtn = slide.getElementsByClassName('stop'),
+        playSet = null,
+        before = 0,
+        after = 0,
+        moveIng = false;
+
+    // init
+    slideCntItem[0].style.left  = 0;
+    playBtn[0].style.display  = 'block';
+    var indi = document.createElement('ul');
+    for(var i = 0;i < slideCntItem.length;i++){
+        indi.innerHTML += '<li></li>';
+    };
+    indi.classList.add('indi');
+    indi.children[0].classList.add('on');
+    slide.append(indi);
+    
+    for(var j = 0;j < indi.children.length;j++){
+        indiClick(j);
+    };
+
+    // initEvnet
+    nextBtn[0].addEventListener('click', function(e){
+        if(!moveIng){
+            after++;
+            if(after >= slideCntItem.length){
+                after = 0;
+            };
+            move(after, before, 'next');
+            before = after;
+        };
     });
 
-    /* 하위 메뉴 안보이게 하기 */
-
-    $(".gnb_container").on({
-        "mouseleave" : function() {
-            if(gnbFlag) {
-                $(".lnb_container").removeClass("appear");
-                $(".lnb_container").addClass("disappear");
-                $(".lnb_container").hide();
-                $(".active_bar").hide();   
-            } else {
-                return;
-            }
-        }
+    prevBtn[0].addEventListener('click', function(e){
+        if(!moveIng){
+            after--;
+            if(after < 0){
+                after = slideCntItem.length - 1;
+            };
+            move(after, before);
+            before = after;
+        };
     });
 
-    /* 모바일 햄버거 메뉴 클릭시*/
-
-    $(".trigger").on({ 
-        "click" : function() {
-            // 햄버거 메뉴 버튼이 보일때 (햄버거 메뉴가 visible 상태인가?로 판단)
-            if ($(".mobile.hamburger").is(":visible")) {
-                /* 모바일 닫기 버튼 show */
-                $(".mobile.hamburger").hide();
-                $(".mobile.close").show();
-
-                /* 모바일 전체 메뉴 show */
-                $("#main_header").height(60);
-                $("#main_content").hide();
-                $("#main_footer").hide();
-
-                $("#mobile_menu").empty(); // #mobile_menu 하위 태그 초기화
-                $("li").eq(3).show();    // mobile에서만 보이는 메뉴 2개 추가
-                $("li").eq(4).show();
-
-                var nav = $(".nav").clone(); 
-                $("#mobile_menu").append(nav);
-                $("#mobile_menu").show();
-
-            } else {  // 닫기 메뉴 버튼이 보일때
-                /* 모바일 햄버거 버튼 show */
-                $(".mobile.hamburger").show();
-                $(".mobile.close").hide();
-
-                /* 모바일 전체 메뉴 show */
-                $("#main_header").height(390);
-                $("#main_content").show();
-                $("#main_footer").show();
-                $("#mobile_menu").hide();
-            }
-
-        },
-        "mouseleave" : function() {
-            //...
-        }
-    });  
-
-     /* 사이즈 증가 했을때 li에서 '개인화된 예보', '설정' 메뉴는 안보이게 함 */
-
-    $(window).resize(function() {
-        var width = $(window).width();
-            if ($("#mobile_menu").is(":visible")) {
-                $(".mobile.hamburger").show();
-                $(".mobile.close").hide();
-                
-                $("#main_header").height(390);
-                $("#main_content").show();
-                $("#main_footer").show();
-                
-                $("#mobile_menu").hide();
-            }
-        
+    playBtn[0].addEventListener('click', function(){
+        playBtn[0].style.display = 'none';
+        stopBtn[0].style.display = 'block';
+        playSet = setInterval(function(){
+            if(!moveIng){
+                after++;
+                if(after >= slideCntItem.length){
+                    after = 0;
+                };
+                move(after, before, 'next');
+                before = after;
+            };
+        }, AUTO_TIME);
     });
+
+    stopBtn[0].addEventListener('click', function(){
+        playBtn[0].style.display = 'block';
+        stopBtn[0].style.display = 'none';
+        clearInterval(playSet);
+    });
+
+    function indiClick(target){
+        indi.children[target].addEventListener('click', function(){
+            if(!moveIng){
+                after = target;
+                if(after > before){
+                    move(after, before, 'next');
+                }else if(after < before){
+                    move(after, before);
+                };
+                before = after;
+            };
+        });
+    }
+
+    function move(after, before, type){
+        var nextX = type === 'next' ? slide.offsetWidth : slide.offsetWidth * -1,
+            prevX = 0,
+            set = null;
+        set = setInterval(function(){
+            moveIng = true;
+            if(type === 'next'){
+                nextX -= MOVEING_PX;
+                slideCntItem[after].style.left = nextX + 'px';
+                if(nextX <= 0){
+                    clearInterval(set);
+                    nextX = slide.offsetWidth;
+                    moveIng = false;
+                };
+                prevX -= MOVEING_PX;
+            }else{
+                nextX += MOVEING_PX;
+                slideCntItem[after].style.left = nextX + 'px';
+                if(nextX >= 0){
+                    clearInterval(set);
+                    nextX = slide.offsetWidth * -1;
+                    moveIng = false;
+                };
+                prevX += MOVEING_PX;
+            };
+            slideCntItem[before].style.left = prevX + 'px';
+        });
+        indi.children[before].classList.remove('on');
+        indi.children[after].classList.add('on');
+    }
 });

@@ -52,3 +52,56 @@ h1{
 .main_item section:nth-child(2) article{
     float: left;
 }
+.box{position:relative; 
+    width:100%;
+    height:240px;
+    background-color:gray;
+    margin: 0 auto;
+    text-align: center;
+}
+.box h1,.box p{
+    color: white;
+}
+.box:before{
+    content:""; 
+    position:absolute; 
+    left:0; 
+    top:0; 
+    width:100%; 
+    height:100%; 
+    background-color:rgba(0,0,0,.6);
+    opacity:0; 
+    transition:0.5s all;
+} 
+.box:after{
+    content:"LET'S GO"; 
+    position:absolute; 
+    bottom:20px; 
+    left:50%; 
+    transform:translateX(-50%); 
+    width:120px; 
+    height:40px; 
+    line-height:40px; 
+    background:black; 
+    color:#fff; 
+    font-size:20px; 
+    border-radius:50%; 
+    text-align:center; 
+    transition:0.5s all;
+} 
+    .box:hover:after{
+        content:"LET'S GO"; 
+        bottom:100px; 
+        background:white;
+        color: black;
+    } .box:hover:before{
+        content:""; 
+        opacity:1;
+    } 
+    .box a{
+        position:absolute; 
+        left:0; 
+        top:0; 
+        width:100%; 
+        height:100%;
+    }
