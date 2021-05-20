@@ -133,7 +133,7 @@ margin-right: 10px;
     #slide {
         position: relative;
         overflow: hidden;
-        width: 450px;
+        width: 400px;
         height: 240px;
         margin: 0 auto;
     }
@@ -142,7 +142,7 @@ margin-right: 10px;
         position: absolute;
         top: 0;
         left: 300px;
-        width: 450px;
+        width: 400px;
         height: 240px;
         text-align: center;
         font-size: 30px;
@@ -171,7 +171,6 @@ margin-right: 10px;
         display: none;
         position: absolute;
         bottom: 5px;
-        right: 5px;
         border: 0;
         padding: 5px;
     }
@@ -193,7 +192,7 @@ margin-right: 10px;
         float: right;
         margin-left: 5px;
         border-radius: 50%;
-        width: 450px;
+        width: 400px;
         height: 240px;
         cursor: pointer;
         opacity: .5;
