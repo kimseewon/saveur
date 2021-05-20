@@ -84,7 +84,7 @@ margin-right: 10px;
     margin: 0 auto;
     text-align: center;
 }
-.box h1,p{
+.box h1,.box p{
     color: white;
 }
 .box:before{

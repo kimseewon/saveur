@@ -29,16 +29,6 @@ li {
     padding-left: 10%;
 }
 
-#gnb ul ul{
-    display: none;
-    position: absolute;
-    top: 20px;
-    width: 180px;
-    background-color: honeydew;
-    border: 1px solid yellow;
-    border-radius: 0 0 7px 10px;
-}
-
 .main_header{
     margin-left: 10%;
 }
