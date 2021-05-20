@@ -133,7 +133,7 @@ margin-right: 10px;
     #slide {
         position: relative;
         overflow: hidden;
-        width: 300px;
+        width: 450px;
         height: 240px;
         margin: 0 auto;
     }
@@ -142,28 +142,14 @@ margin-right: 10px;
         position: absolute;
         top: 0;
         left: 300px;
-        width: 300px;
+        width: 450px;
         height: 240px;
         text-align: center;
         font-size: 30px;
         line-height: 300px;
     }
     
-    #slide .cnt>li:nth-child(1) {
-        background-color: red;
-    }
-    
-    #slide .cnt>li:nth-child(2) {
-        background-color: orange;
-    }
-    
-    #slide .cnt>li:nth-child(3) {
-        background-color: green;
-    }
-    
-    #slide .cnt>li:nth-child(4) {
-        background-color: blue;
-    }
+
     
     #slide .btn>button {
         position: absolute;
@@ -204,10 +190,10 @@ margin-right: 10px;
     }
     
     #slide .indi>li {
-        float: left;
+        float: right;
         margin-left: 5px;
         border-radius: 50%;
-        width: 300px;
+        width: 450px;
         height: 240px;
         cursor: pointer;
         opacity: .5;
