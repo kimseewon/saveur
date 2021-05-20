@@ -15,16 +15,28 @@ ul {
     list-style:none;
     margin:0;
     padding:0;
-    margin-left: 200px;
+    margin-left: 150px;
     margin-top: 0;
 }
 
 li {
-    margin-top: -20px;
+    margin-top: -25px;
     float: right;
     list-style: none;
     color: black;
     font-size: 20px;
+    position: relative;
+    padding-left: 10%;
+}
+
+#gnb ul ul{
+    display: none;
+    position: absolute;
+    top: 20px;
+    width: 180px;
+    background-color: honeydew;
+    border: 1px solid yellow;
+    border-radius: 0 0 7px 10px;
 }
 
 .main_header{
